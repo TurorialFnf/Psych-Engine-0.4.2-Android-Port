@@ -1978,9 +1978,13 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingString == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Not pressed: ' + songMisses + ' | Rank: ' + ratingString;' | Make by Raiden
+			scoreTxt.text = 'Score: ' + songScore + ' | Not pressed: ' + songMisses + ' | Rank: ' + ratingString;
+			judgementCounter.text = 'Sicks: 0 \nGoods: 0\nBads: 0\nShits: 0\ne';
+			              healthCounter.text = 'Health: 50%';
 		} else {
 			scoreTxt.text = 'Score: ' + songScore + ' | Not pressed: ' + songMisses + ' | Rank: ' + ratingString + ' (' + Math.floor(ratingPercent * 100) + '%)';
+			              judgementCounter.text = 'Sicks: ${sicks}\nGoods: ${goods}\nBads: ${bads}\nShits: ${shits}\nE';
+                        healthCounter.text = 'Health: ' + Math.round(health * 50) + '%'  ;
 		}
 
 		if(cpuControlled) {
