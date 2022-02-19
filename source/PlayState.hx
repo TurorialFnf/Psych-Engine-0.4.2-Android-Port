@@ -1979,8 +1979,10 @@ class PlayState extends MusicBeatState
 
 		if(ratingString == '?') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Combo breaks: ' + songMisses + ' | Rank: ' + ratingString;
+			judgementCounter.text = 'Sicks: 0 \nGoods: 0\nBads: 0\nShits: 0\ne';
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo breaks: ' + songMisses + ' | Rank: ' + ratingString + ' (' + Math.floor(ratingPercent * 100) + '%)';
+			scoreTxt.text = 'Score: ' + songScore + ' | Combo breaks: ' + songMisses + ' | Acc' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' +' | Rank: ' + ratingString + ' (' + Math.floor(ratingPercent * 100) + '%)';
+			judgementCounter.text = 'Sicks: ${sicks}\nGoods: ${goods}\nBads: ${bads}\nShits: ${shits}\nE';
 		}
 
 		if(cpuControlled) {
