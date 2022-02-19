@@ -1,4 +1,4 @@
-package;
+﻿package;
 
 #if desktop
 import Discord.DiscordClient;
@@ -69,16 +69,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['F', 0.2], //From bad to bad
-		['E', 0.4], //From OK to OK
-		['E+', 0.5], //From NICE to NICE
-		['C', 0.6], //From NOT BAD to NOT BAD
-		['C+', 0.69], //From GOOD to GOOD
-		['B', 0.7], //WOW
-		['B+', 0.8], //From SUPER GOOD to SUPER GOOD
-		['A', 0.9], //From AMAZING to AMAZING
-		['A+', 1], //From GG% to GG
-		['SSS+', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['', 0.2], //From 0% to 19%
+		['', 0.4], //From 20% to 39%
+		['', 0.5], //From 40% to 49%
+		['', 0.6], //From 50% to 59%
+		['', 0.69], //From 60% to 68%
+		['', 0.7], //69%
+		['', 0.8], //From 70% to 79%
+		['', 0.9], //From 80% to 89%
+		['', 1], //From 90% to 99%
+		['', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	#if (haxe >= "4.0.0")
@@ -790,7 +790,7 @@ class PlayState extends MusicBeatState
 		timeBarBG.scrollFactor.set();
 		timeBarBG.alpha = 0;
 		timeBarBG.visible = !ClientPrefs.hideTime;
-		timeBarBG.color = FlxColor.RED;
+		timeBarBG.color = FlxColor.BLACK;
 		timeBarBG.xAdd = -4;
 		timeBarBG.yAdd = -4;
 		add(timeBarBG);
@@ -798,7 +798,7 @@ class PlayState extends MusicBeatState
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFFFFFFFF, 0xFFFF00);
+		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = !ClientPrefs.hideTime;
@@ -908,7 +908,7 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
-		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "", 32);
+		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "BOTPLAY", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
 		botplayTxt.borderSize = 1.25;
@@ -1978,9 +1978,9 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingString == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo breaks: ' + songMisses + ' | Rank: ' + ratingString;
+			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songWatermark + '|Test:'   + songMisses + ' | Rating: ' + ratingString;
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo breaks: ' + songMisses + ' | Acc' + Highscore.floorDecimal(ratingPercent * 100, 2) + '%' +' | Rank: ' + ratingString + ' (' + Math.floor(ratingPercent * 100) + '%)';
+			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songWatermark + '|Test:' + songMisses + ' | Rating: ' + ratingString + ' (' + Math.floor(ratingPercent * 200) + '%)';
 		}
 
 		if(cpuControlled) {
