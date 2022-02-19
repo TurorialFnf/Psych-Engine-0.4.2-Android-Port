@@ -1978,7 +1978,7 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingString == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Not pressed: ' + songMisses + ' | Rank: ' + ratingString;
+			scoreTxt.text = 'Score: ' + songScore + ' | Not pressed: ' + songMisses + ' | Rank: ' + ratingString;' | Make by Raiden
 		} else {
 			scoreTxt.text = 'Score: ' + songScore + ' | Not pressed: ' + songMisses + ' | Rank: ' + ratingString + ' (' + Math.floor(ratingPercent * 100) + '%)';
 		}
