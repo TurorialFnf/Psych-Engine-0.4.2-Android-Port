@@ -1978,9 +1978,9 @@ class PlayState extends MusicBeatState
 		super.update(elapsed);
 
 		if(ratingString == '?') {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songWatermark + '|Test: ' + songMisses + ' | Rating: ' + ratingString;
+			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songText + '|Test: ' + songMisses + ' | Rating: ' + ratingString;
 		} else {
-			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songWatermark + '|Test:' + songMisses + ' | Rating: ' + ratingString + ' (' + Math.floor(ratingPercent * 200) + '%)';
+			scoreTxt.text = 'Score: ' + songScore + ' | Combo Breaks: ' + songText + '|Test:' + songMisses + ' | Rating: ' + ratingString + ' (' + Math.floor(ratingPercent * 200) + '%)';
 		}
 
 		if(cpuControlled) {
