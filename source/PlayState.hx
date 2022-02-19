@@ -1979,8 +1979,6 @@ class PlayState extends MusicBeatState
 
 		if(ratingString == '?') {
 			scoreTxt.text = 'Score: ' + songScore + ' | Not pressed: ' + songMisses + ' | Rank: ' + ratingString;
-			judgementCounter.text = 'Sicks: 0 \nGoods: 0\nBads: 0\nShits: 0\ne';
-			         healthCounter.text = 'Health: 50%';
 		} else {
 			scoreTxt.text = 'Score: ' + songScore + ' | Not pressed: ' + songMisses + ' | Rank: ' + ratingString + ' (' + Math.floor(ratingPercent * 100) + '%)';
 		}
