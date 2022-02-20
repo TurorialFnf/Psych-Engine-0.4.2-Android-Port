@@ -929,6 +929,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 						
                     case'Hitsound':
                     ClientPrefs.hitSound = !ClientPrefs.hitSound;
+                    
 					case 'Middlescroll':
 						ClientPrefs.middleScroll = !ClientPrefs.middleScroll;
 
