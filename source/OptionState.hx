@@ -926,7 +926,9 @@ class PreferencesSubstate extends MusicBeatSubstate
 
 					case 'Downscroll':
 						ClientPrefs.downScroll = !ClientPrefs.downScroll;
-
+						
+                    case'Hitsound':
+                    ClientPrefs.hitSound = !ClientPrefs.hitSound;
 					case 'Middlescroll':
 						ClientPrefs.middleScroll = !ClientPrefs.middleScroll;
 
@@ -1034,7 +1036,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 			case 'Downscroll':
 				daText = "If checked, notes go Down instead of Up, simple enough.";
 			 case'Hitsound':
-			daText:If checked, If click the notes will make a sound.";
+			daText:"If checked, If click the notes will make a sound.";
 			case 'Middlescroll':
 				daText = "If checked, hides Opponent's notes and your notes get centered.";
 			case 'Ghost Tapping':
