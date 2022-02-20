@@ -92,7 +92,7 @@ class ClientPrefs {
 		if(FlxG.save.data.downScroll != null) {
 			downScroll = FlxG.save.data.downScroll;
 		}
-		if(FlxG.save.date.hitSound != null) {
+		if(FlxG.save.data.hitSound != null) {
 		    hitSound = FlxG.save.data.hitSound;
 		}
 		if(FlxG.save.data.middleScroll != null) {
