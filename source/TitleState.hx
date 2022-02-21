@@ -471,7 +471,7 @@ class TitleState extends MusicBeatState
 				// credTextShit.visible = true;
 				case 3:
 					addMoreText('Raiden Alfares', 45);
-					addMoreText('Meliozets'', 45);
+					addMoreText('Meliozets', 45);
 				// credTextShit.text += '\npresent...';
 				// credTextShit.addText();
 				case 4:
@@ -510,7 +510,7 @@ class TitleState extends MusicBeatState
 					addMoreText('Engine');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText('present'); // credTextShit.text += '\nFunkin';
+				addMoreText('present'); // credTextShit.text += '\nFunkin';
 
 				case 16:
 					skipIntro();
