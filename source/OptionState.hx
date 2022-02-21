@@ -1119,7 +1119,7 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Downscroll':
 						daValue = ClientPrefs.downScroll;
 					case'Hitsound':
-					daValue = ClientPrefs.hitsound;
+					daValue = ClientPrefs.hitSound;
 					case 'Middlescroll':
 						daValue = ClientPrefs.middleScroll;
 					case 'Ghost Tapping':
