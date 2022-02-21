@@ -69,7 +69,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-
+	['F', 0.2], //From bad to bad
+    ['E', 0.4], //From OK to OK
+    ['E+', 0.5], //From NICE to NICE
+	['C', 0.6], //From NOT BAD to NOT BAD
+	['C+', 0.69], //From GOOD to GOOD
+	['B', 0.7], //WOW
+	['B+', 0.8], //From SUPER GOOD to SUPER GOOD
+	['A', 0.9], //From AMAZING to AMAZING
+	['A+', 1], //From GG% to GG
+	['SSS+', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	
 	#if (haxe >= "4.0.0")
