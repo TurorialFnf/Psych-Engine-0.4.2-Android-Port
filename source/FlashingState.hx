@@ -24,11 +24,9 @@ class FlashingState extends MusicBeatState
 		add(bg);
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			"Hey, watch out!\n
-			This Mod contains some flashing lights!\n
-			Press ENTER to disable them now or go to Options Menu.
-			Press ESCAPE to ignore this message.\
-			You've been warned!",
+			"Hey, Welcome To Osu! \n
+			Press Enter to start!\n
+			Enjoy",
 			32);
 		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
