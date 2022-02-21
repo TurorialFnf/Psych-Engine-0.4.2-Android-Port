@@ -1036,8 +1036,8 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If unchecked, disables anti-aliasing, increases performance\nat the cost of the graphics not looking as smooth.";
 			case 'Downscroll':
 				daText = "If checked, notes go Down instead of Up, simple enough.";
-			 case'Hitsound':
-			daText:"If checked, If click the notes will make a sound.";
+		   case 'Hitsound':
+			daText  = "If checked, If click the notes will make a sound.";
 			case 'Middlescroll':
 				daText = "If checked, hides Opponent's notes and your notes get centered.";
 			case 'Ghost Tapping':
