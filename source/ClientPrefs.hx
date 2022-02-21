@@ -9,6 +9,7 @@ import Controls;
 class ClientPrefs {
 	public static var downScroll:Bool = false;
 	public static var hitSound:Bool = false;
+	public static var MemoryCounter:Bool = true;
 	public static var middleScroll:Bool = false;
 	public static var showFPS:Bool = true;
 	public static var flashing:Bool = true;
@@ -60,6 +61,7 @@ class ClientPrefs {
 		FlxG.save.data.hitSound = hitSound;
 		FlxG.save.data.middleScroll = middleScroll;
 		FlxG.save.data.showFPS = showFPS;
+		FlxG.save.data.showMemoryCounter = showMemoryCounter;
 		FlxG.save.data.flashing = flashing;
 		FlxG.save.data.globalAntialiasing = globalAntialiasing;
 		FlxG.save.data.noteSplashes = noteSplashes;
@@ -95,10 +97,19 @@ class ClientPrefs {
 		if(FlxG.save.data.hitSound != null) {
 		    hitSound = FlxG.save.data.hitSound;
 		}
+		if(FlxG.save.data.circleNotes != null) {
+		    hitSound = FlxG.save.data.circleNotes;
+		}
 		if(FlxG.save.data.middleScroll != null) {
 			middleScroll = FlxG.save.data.middleScroll;
 		}
 		if(FlxG.save.data.showFPS != null) {
+			showFPS = FlxG.save.data.showFPS;
+			if(Main.fpsVar != null) {
+				Main.fpsVar.visible = showFPS;
+			}
+		}
+		if(FlxG.save.data.showMemoryCounter != null) {
 			showFPS = FlxG.save.data.showFPS;
 			if(Main.fpsVar != null) {
 				Main.fpsVar.visible = showFPS;
