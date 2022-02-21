@@ -1,4 +1,4 @@
-package;
+package; // pls stop reading my playstate
 
 #if desktop
 import Discord.DiscordClient;
